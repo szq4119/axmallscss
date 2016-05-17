@@ -1,0 +1,58 @@
+@import "../G" ;
+.global-msg-tpl{
+    text-align: center; width: 400px; margin: 0px auto; position: relative;
+    div{
+         padding: 10px; font-size: 20px; background: #fff; line-height: 30px; padding: 40px; color: #666;
+    }
+    i{
+        font-size: 26px;
+    }
+    .global-msg-ok{
+        color: $color_g;
+    }
+    .global-msg-error{
+        color: $color_r;
+    }
+    .global-msg-warn{
+        color: $color_y;
+    }
+}
+.global-dialog-tpl{
+    width: 615px; margin: 0px auto; position: relative; background: #fff; border:4px solid #ddd;
+    .title{
+        font-size: 16px; line-height: 30px; color: #fff; background: $color_g; padding: 0px 10px;
+    }
+    .mfp-close{
+        width: 30px; line-height: 30px; height: 30px; color: #fff!important;
+    }
+    .content{
+        padding: 8px 10px;
+    }
+}
+
+.obj-top-msg{
+    position: absolute;
+    span{
+        display: block; padding: 0px 20px;
+    }
+    @mixin msgbox ($color, $bg){
+        border: 1px solid $color; background:$bg; color: $color;
+        s{
+            width: 0; height: 0; border-width: 5px; border-style: solid; border-color: $color transparent transparent transparent; position: absolute; bottom: -9px; left: 10px;
+            i{
+                width: 0;height: 0;border-width: 5px;border-style: solid;border-color: $bg transparent transparent transparent;position: absolute;top: -7px;left: -5px;
+            }
+        }
+    }
+
+    .ok{
+        @include msgbox($color_g, #EEF8E4);
+    }
+    .error{
+        @include msgbox($color_r, #FCEBED);
+    }
+    .warn{
+        @include msgbox($color_y, #FFEADB);
+    }
+
+}

@@ -1,0 +1,50 @@
+@import "../G" ;
+@import "../components/page" ;
+$width: 1200px;
+.w{width: $width; margin: 0px auto;}
+.title{
+	height: 30px; line-height: 30px; overflow: hidden; margin-top:20px;font-size: 26px; font-family: $font_weiruan; color:$color_g; height: 30px; line-height: 30px;
+	em{
+        height: 30px; line-height: 30px; border-left:8px solid $color_g; margin-right: 10px; float: left; display:block;
+    }
+}
+.goods-list{
+    @include createRow(5,$width);
+    li{
+        a{display:block; border:1px solid #e5e5e5; background:#fff; text-align:center; padding: 5px 5px 10px 5px; font-size: 12px;
+            img{width: 220px;}
+            p{text-align:left; color:#666; margin-top:10px; line-height: 16px; overflow: hidden; padding: 0px 5px;
+                em{font-size:16px; color:$color_r; font-style:normal;}
+                del{margin-left:10px;}
+            }
+            .name{
+                overflow: hidden; height: 32px;
+            }
+        }
+    }
+}
+.brand-list{
+    margin-top: 10px;
+    @include createRow(6,$width, 0px); border: 1px solid #F5F5F5;
+    li{
+        height: 124px;
+        a{display:block; text-align: center; border: 1px solid #F5F5F5;padding: 10px 0px;
+            .intr{padding: 0px 10px; height: 40px; line-height: 20px; color: #666; overflow: hidden; font-size: 12px;}
+        }
+    }
+}
+.site-slide-nav{
+    height: 340px!important;
+    a{
+        line-height: 16px; height: 30px; overflow: hidden; color: #666; text-align:center; border: 1px solid #ddd; display: block; margin-bottom: 3px; font-size: 12px; padding: 5px; width: 30px; background-color: #fff;
+    }
+    a:hover{
+         color: $color_g; border: 1px solid $color_g;
+    }
+    .site-slide-top{
+         border: 0px; padding: 0px;
+    }
+    .site-slide-top:hover{
+        border: 0px;
+    }
+}

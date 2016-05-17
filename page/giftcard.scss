@@ -1,0 +1,66 @@
+@import "../G";
+@import "../components/button";
+
+.giftcard1000{
+    background: url('http://img.axmall.com.au/1/593331442207981.gif') center center; width:100%; height: 500px;
+    .w{
+        height: 500px;
+    }
+    .card1000{
+        position: absolute; top: 75px; right: 100px; width: 370px; height: 230px; display: block;
+    }
+}
+.giftcard500{
+    background: url('http://img.axmall.com.au/1/503011442207971.gif') center center; width:100%; height: 500px;
+    .w{
+        height: 500px;
+    }
+    .card500{
+        position: absolute; top: 83px; left: 20px; width: 370px; height: 230px; display: block;
+    }
+}
+.giftcard200{
+    background: url('http://img.axmall.com.au/7/783891442207957.gif') center center; width:100%; height: 500px;
+    .w{
+        height: 500px;
+    }
+    .card200{
+        position: absolute; top: 75px; right: 130px; width: 370px; height: 230px; display: block;
+    }
+}
+.giftcard100{
+    background: url('http://img.axmall.com.au/3/458111442207943.gif') center center; width:100%; height: 480px;
+    .w{
+        height: 480px;
+    }
+    .card100{
+        position: absolute; top: 65px; left: 20px; width: 370px; height: 230px; display: block;
+    }
+}
+.add1000{
+    position: absolute; bottom: 100px; right: 210px; line-height: 30px;
+    font{
+        font-size: 24px; font-family: $font_weiruan; color: $color_r; margin-right: 10px; line-height: 30px;
+    }
+}
+.add500{
+    position: absolute; bottom: 90px; left: 30px; line-height: 30px;
+    font{
+        font-size: 24px; font-family: $font_weiruan; color: $color_r; margin-right: 10px; line-height: 30px;
+    }
+}
+.add200{
+    position: absolute; bottom: 100px; right: 230px; line-height: 30px;
+    font{
+        font-size: 24px; font-family: $font_weiruan; color: $color_r; margin-right: 10px; line-height: 30px;
+    }
+}
+.add100{
+    position: absolute; bottom: 90px; left: 30px; line-height: 30px;
+    font{
+        font-size: 24px; font-family: $font_weiruan; color: $color_r; margin-right: 10px; line-height: 30px;
+    }
+}
+@media screen and (max-width: 1024px){
+    .giftcard1000,.giftcard500,.giftcard200,.giftcard100{ width:1200px!important;}
+}

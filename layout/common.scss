@@ -1,0 +1,32 @@
+@import "../G" ;
+@import "font" ;
+@import "head" ;
+@import "foot" ;
+
+@import "../components/button";
+@import "../components/popup";
+@import "../components/nianhuo";
+body{color: #666;}
+body{
+    position: relative;
+}
+.wout{ width: 100%;}
+@media screen and (max-width: 1024px){
+	.wout{ width:1200px; }
+}
+.over_visi{ overflow: visible;}
+.over_hidd{ overflow: hidden;}
+
+.color_6{color: #666 !important; }
+.color_9{color: #999 !important;}
+.color_r{color: $color_r !important;}
+.color_b{color: $color_b !important;}
+.color_g{color: $color_g !important;}
+.color_ora{color: $color_ora !important;}
+
+del{color:#999 !important;}
+.radio {vertical-align: middle; margin: -3px 2px 0px 0px; margin-right: 4px; width: 15px; border: 0px;}
+.pr{position: relative;}
+.breadcrumb{ padding: 5px 0px;
+    a{color: #666666;}
+}

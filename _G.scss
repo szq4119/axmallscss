@@ -1,0 +1,110 @@
+/* width */
+
+/* color */
+$color_r : 			#E4434B;
+$color_b : 			#0059B2;
+$color_g : 			#7BBE31;
+$color_y :			#FFAA71;
+$color_ora :		#F88600;
+
+$sort-ary : all,baby,food,bags-shoes,homeware,health,skin,liquor;
+@function coupon_color($type){
+	$color: #E4434B;
+	@if($type == 'baby') {
+		$color: #188CFE;
+	}
+	@if($type == 'food') {
+		$color: #B25900;
+	}
+	@if($type == 'homeware') {
+		$color: #46AAA0;
+	}
+	@if($type == 'health') {
+		$color: #B90700;
+	}
+	@if($type == 'skin') {
+		$color: #79BE31;
+	}
+	@if($type == 'liquor') {
+		$color: #9789CF;
+	}
+	@return $color;
+}
+
+/* font */
+$font_weiruan : "Microsoft YaHei";
+
+/* mixin */
+@mixin opacity ($value: 80){
+	filter:alpha(opacity=$value);
+	-moz-opacity : $value/100;
+	-khtml-opacity : $value/100;
+	opacity: $value/100;
+}
+
+@mixin radius($value){
+	-moz-border-radius:$value;
+	-khtml-border-radius:$value;
+	-webkit-border-radius:$value;
+	border-radius:$value;
+}
+
+@mixin createRow($num, $waperwidth, $col-margin: 10px){
+	$total_width: $waperwidth + $col-margin;
+	width: $total_width; overflow: hidden;
+    .col-#{$num}{
+		width: ($total_width/$num - $col-margin); margin:$col-margin $col-margin 0px 0px; float: left;
+    }
+}
+
+@mixin createlist($num, $waperwidth, $col-margin: 30px){
+	$p:  $col-margin - 10px;
+	$total_width : $waperwidth - ($p*2) + $col-margin;
+	$w:($total_width/$num) - $col-margin;
+	padding-left: $p;
+	width: $total_width;
+	.col-#{$num}{
+		width: $w;
+		margin:$col-margin $col-margin 0px 0px;
+		float: left;
+		position: relative;
+		overflow: hidden;
+		height: $w + (18px+5px) * 4;
+		img{ width: $w; height: $w;}
+		.wrap{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			text-align: center;
+			a{
+				display: block; font-size: 12px;
+				p{
+					text-align: left; color: #666; margin: 5px auto; line-height: 18px; overflow: hidden; padding: 0px 5px;
+				}
+				em{font-size:16px; color:$color_r; font-style:normal;}
+				del{margin-left:10px;}
+				span{color:#999;}
+				.name{overflow: hidden; height: 36px;}
+			}
+			.add-cart{
+				background: $color_g; color: #fff; line-height: 22px; font-size: 12px; height: 22px; padding: 0px;  width: 220px; margin: 5px auto; display: none;
+			}
+		}
+	}
+	.col-#{$num}:hover{
+		overflow: visible;
+		img{ width: 100%;}
+		z-index: 10;
+		.wrap{
+			width: $w;
+			padding: $p;
+			top: -($p + 2px);
+			left: -($p + 2px);
+			height: $w + (18px+5px) * 4  + $p;
+			border: 2px solid $color_g;
+			z-index: 200;
+			background: #fff;
+		}
+		.add-cart{display: block;}
+	}
+}

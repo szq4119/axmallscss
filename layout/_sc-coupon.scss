@@ -1,0 +1,48 @@
+.sc-coupon{
+	.tab{
+
+		a{
+			display: block; width: 50%; float: left; text-align: center; font-size: 16px; background: #ddd; color:#000; border-top: 5px solid #ddd;
+			em{font-size: 24px; font-style: normal;}
+		}
+		a.on{
+			background: #fff; border-top: 5px solid $color_g;
+		}
+	}
+	.couponlist{
+		$ary: baby,food,bags-shoes,homeware,health,skin,liquor;
+		@each $type in $ary {
+			.coupon_#{$type}{
+				background: coupon_color($type);
+			}
+		}
+		li{
+			width: 250px; height: 100px; margin: 10px auto; position: relative;
+			div.top{
+				background: url(border.png) repeat-x; background-position: 3px 0px; height: 3px; width: 250px; position: absolute; top:0px; left: 0px;
+			}
+			a{display: block; color:#fff;
+				.iconfont{font-size: 40px; opacity: 0.8; width: 40px; height: 50px; line-height: 50px; margin:20px 10px;}
+				.coupon{
+					width: 190px; line-height: 26px; padding: 10px 0px;
+					.type{font-size: 16px; font-family: $font_weiruan; font-weight: bold;}
+				}
+			}
+			div.bottom{
+				background: url(border.png) repeat-x; background-position: 3px -3px; height: 3px; width: 250px; position: absolute; bottom: 0px; left: 0px;
+			}
+		}
+	}
+	.giftlist{
+		li{width: 250px; height: 100px; margin: 10px auto;}
+		$ary : 100,200,500,1000;
+		@each $i in $ary{
+			.gift_#{$i}{
+				background: url(gift.gif); background-position-x: 0;background-position-y: -(index($ary,$i)*100px - 100px);position: relative;
+				span{
+					position: absolute; top:50px; left: 20px; display:block; width:120px; height:40px; line-height: 20px; color: #333;
+				}
+			}
+		}
+	}
+}

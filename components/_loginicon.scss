@@ -1,0 +1,10 @@
+$bg : 'logic_icon.png';
+.logic_error{
+	background: url($bg) no-repeat 0px 0px; width: 32px; height: 32px;display: block;
+}
+.logic_ok{
+	background: url($bg) no-repeat 0px -35px; width: 32px; height: 32px;display: block;
+}
+.logic_warn{
+	background: url($bg) no-repeat 0px -70px; width: 30px; height: 30px;display: block;
+}

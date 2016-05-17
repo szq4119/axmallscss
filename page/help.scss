@@ -1,0 +1,80 @@
+@import "../G";
+@import "../components/button";
+@import "../components/page";
+
+
+$width : 1200px;
+.w{
+	width: $width; margin: 0px auto;
+}
+em.error{color: $color_r; font-style: normal; display: none; margin-left: 5px;}
+.table{
+	width: 100%;
+	th{background: #f5f5f5; height: 30px; padding: 0px 10px; font-weight: normal;}
+}
+.tab_link{margin: 10px 0px; height: 30px;border-bottom: 2px solid $color_g;
+	a{display:block; padding: 0px 40px; height: 30px; line-height: 30px;  float: left; color:#333; background: #F5F5F5;}
+	.on{background: $color_g; color:#fff;}
+	.bgfff{background: #fff;}
+}
+
+.form{
+	.item{line-height: 30px; height: 30px;margin: 15px 0px;
+		label{margin-right: 10px; cursor: pointer;}
+	}
+	.w_s{width: 120px;}
+	.w_ss{width: 80px;}
+	.w_l{width: 360px;}
+	.w_m{width: 180px;}
+	input[type="text"]{height: 25px; line-height: 25px; border: 1px solid #ccc; padding: 0px 4px; vertical-align: middle;}
+	input{_height: 25px; _line-height: 25px; _border: 1px solid #ccc; _padding: 0px 4px;}
+	input.error{border:1px solid $color_r;}
+}
+.member_center{
+	background: #F5F5F5; border: 1px solid #F5F5F5;
+	.mc_right{
+		width: 920px; min-height: 800px; margin-left: 240px; background: #fff; padding: 20px;_padding: 15px; line-height: 24px;
+		.general_table{
+			background: #F5F5F5;
+			td{height: 40px; background: #fff; padding: 0px 10px;}
+		}
+		.verify{border: 1px solid #ccc; padding: 100px 50px; height: 170px;
+			.scode{background: url(scode.jpg) no-repeat center 0px; width: 222px; font-size: 12px; height: 60px; padding-top: 130px; line-height: 30px;}
+			.verifyform{
+				margin-left: 100px;
+				.items{
+					line-height: 50px; height: 50px; margin:0px;
+					.l{width: 320px;}
+					span{display: block; float: left; margin-left: -60px; font-size: 14px;}
+					input{ height: 30px;line-height: 30px;border: 1px solid #CCC;padding: 0px 4px;vertical-align: middle;}
+					.captcha_img{margin-top: 12px;}
+				}
+			}
+		}
+
+		.line{border-bottom: 1px dotted #ccc; height: 10px; margin-bottom: 10px;}
+	}
+	.mc_left{
+		float: left; width: 240px;
+		dl{
+			margin-top: 10px;
+			a{color:#333;}
+			dt{line-height: 35px; padding-left: 40px; font-weight: bold;}
+			dd{line-height: 30px; padding-left: 60px;}
+			.on{
+				background: $color_g;
+				a{color: #fff;}
+			}
+		}
+		.line{border-bottom: 1px dashed #ccc; height: 10px; margin: 0px 10px;}
+	}
+}
+#guaranteed_slider{
+	width: 800px;
+	li{
+		text-align: center;
+		a{
+			width: 800px; margin: 0px auto;  display: block;
+		}
+	}
+}

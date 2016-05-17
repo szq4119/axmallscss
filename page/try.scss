@@ -1,0 +1,207 @@
+@import "../G" ;
+@import "../components/page";
+$index_bg : "index.png";
+$detail : 'detail.png';
+$width: 1200px;
+.foretaste-btn{
+    border-bottom: 2px solid $color_g; width: $width; margin: 0px auto; position: relative; height: 40px;
+    a{
+        line-height: 40px; height: 40px; padding: 0px 20px; font-size: 20px; color: #666; display:inline-block; *display:inline; *zoom: 1;
+    }
+    a.on{
+        color:$color_g; border: 2px solid $color_g; border-bottom: 0px; height: 40px; background: #f5f5f5;
+    }
+}
+.bgf5{
+    background: #f5f5f5;
+}
+.topiclist{
+    .item{
+        border: 1px solid #ddd; width: 1188px; margin: 20px 0px 0px 0px; padding: 5px; background: #fff; position: relative; background: #fff;
+        img{width: 670px;}
+        .info{
+            width: 490px; margin-right: 10px; height: 340px; position: relative;
+            h2{
+                font-family: $font_weiruan; font-size: 22px; margin: 10px 0px; height: 72px; overflow: hidden;
+                a{
+                    color:#444;
+                }
+            }
+            .brief-intr{
+                color: #666; border-top: 1px dotted #eee; padding-top:10px; line-height: 24px; margin-bottom: 10px; height: 70px; overflow: hidden;
+            }
+            .time{
+                background: url($index_bg) 0px -34px no-repeat; height: 25px; line-height: 25px; padding-left: 30px; font-size: 18px; font-family: $font_weiruan; color: #666;
+                em{
+                    font-style: normal;
+                }
+            }
+            .price{
+                line-height: 40px; height: 40px; font-size: 16px; margin-top: 10px;
+                em{
+                    font-style: normal;
+                }
+                .fs36{
+                    font-size: 36px;
+                }
+            }
+            .join{
+                text-align: left; line-height: 50px; font-size: 16px; margin-top: 20px; position: absolute; bottom: 10px; left: 0px;width: 490px;
+                a{
+                    background: url($index_bg) 0px -70px; width: 138px; height: 50px; display: block; float: right; line-height: 50px; color: #fff; text-align: center; font-size: 18px; margin-left: 10px;
+                }
+                em{
+                    padding: 4px 8px;background: #F68587;font-style: normal; @include radius(2px); color: #fff; margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+.previewslist{
+    .join{
+        a{
+            @include opacity(40);
+        }
+    }
+}
+
+.goods-info{
+    margin-top: 10px; width:880px;
+    .goods-imgs{
+        width: 380px;position: relative;
+        span.freeshipping{width: 110px; height: 110px; z-index: 9999; background: url($detail) 0px -155px no-repeat; display: block; position: absolute; top:0px; left: 0px;}
+        .bigimg{
+            img{width: 380px; height: 380px;}
+        }
+        #imglist{ margin-top: 10px;position: relative; height: 64px;margin-left:20px;margin-right:20px;
+            .left{border: 1px solid #ddd; width: 14px; height: 62px; display: block; position: absolute; top:0px; left: -20px;
+                i{width:0; height:0; border-width:5px; border-style:solid; border-color: transparent #ddd transparent  transparent; position: absolute; top:25px;left: -1px;}
+            }
+
+            .right{
+                border: 1px solid #ddd; width: 14px; height: 62px; display: block; position: absolute; top:0px; right: -20px;
+                i{width:0; height:0; border-width:5px; border-style:solid; border-color: transparent  transparent  transparent #ddd; position: absolute; top:25px;right: -1px;}
+            }
+            ul{position:absolute;white-space:nowrap;
+                li{display: none;border: 1px solid #ddd; margin:0px 5px;
+                    img{border: 1px solid #fff;}
+                }
+                li.on{border: 1px solid $color_g;
+                    img{border: 1px solid $color_g;}
+                }
+            }
+        }
+    }
+    .goods-intro{
+        width: 480px; margin-left: 20px;
+        .name{line-height: 30px; color: #333; margin-bottom: 10px; font-family: $font_weiruan;}
+        .active-info{
+            background: #f5f5f5; margin-top: 10px;
+            .ai-time{
+                background: $color_r; color: #fff; line-height: 40px; font-size: 16px; padding: 0px 20px;
+            }
+            .ai-price{
+                padding: 15px 20px;
+                em{
+                    font-style: normal;
+                }
+            }
+        }
+        .join-info{
+            height: 60px; line-height: 60px; border-bottom: 1px dotted #ddd; text-align: center; font-size: 16px; margin-bottom: 20px;
+        }
+        .submitbox{
+            padding-left: 50px; height: 45px;
+            .btn{
+                background: #fff; border: 2px solid $color_r; color: $color_r; padding: 10px 20px; font-size: 16px; @include radius(3px);
+            }
+            .graybtn{
+                background: #fff; border: 2px solid #888; color: #888; padding: 10px 20px; font-size: 16px; @include radius(3px);
+            }
+        }
+    }
+    .goods-introduce{
+        .tab-link{height: 30px;border-bottom: 2px solid $color_g;
+            a{display:block; padding: 0px 40px; height: 30px; line-height: 30px;  float: left; color:#333; background: #F5F5F5;}
+            .on{background: $color_g; color:#fff;}
+        }
+        .try-report{
+            .item{
+                border-bottom: 1px dotted #ddd; padding: 20px;
+                .img-list{
+                    li{
+                        display:inline-block; *display:inline; *zoom:1;border: 1px solid #ddd; margin-right: 5px; padding: 1px; cursor: pointer;
+                        img{
+                             cursor: pointer; width: 60px; height: 60px;
+                        }
+                    }
+                    li.on{
+                        border: 2px solid $color_g; padding: 0px;
+                    }
+                }
+                .showimg{
+                    margin-top: 10px; width: 300px; height: 300px; text-align:center; display:table; border: 1px solid #ddd; position: relative;
+                    span{
+                        display:table-cell; vertical-align: middle;
+                    }
+                    .close{
+                        position: absolute; top: 5px; right: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+.hide{
+    display: none!important;
+}
+.person-info{
+    width: 300px; border: 1px solid #EEEEEE;
+    .title{
+        background: #EFF9E6; color: $color_g; font-size: 18px; font-family: $font_weiruan; text-align: center; height: 30px; line-height: 30px;
+    }
+    a.nologin{
+        margin: 20px auto; color: $color_b; display: block; text-align: center;
+    }
+    .logined{
+        padding: 10px; line-height: 30px;
+    }
+    div.name-list{
+        padding: 10px; border-top: 1px dotted #ccc; line-height: 30px;
+        ol{
+            li{
+                line-height: 20px; height: 20px; padding: 5px 0px;
+                em{
+                    font-style: normal; background: #8C8C8C; color: #fff; text-align:center; width: 20px; height: 20px; display:inline-block; *display:inline; *zoom: 1; @include radius(2px); margin-right: 5px;
+                }
+                .n3{
+                    background: $color_r; color: #fff;
+                }
+            }
+        }
+    }
+    .copyurl{
+         line-height: 25px; height: 25px;
+        input{
+            border: 1px solid #ddd; width: 200px; border-right: 0px; line-height: 23px; height: 23px; padding: 0px 6px; color: #888;
+        }
+    }
+}
+.form{
+    padding-left: 150px;
+    .item{
+        text-align: left;padding: 8px 0px; line-height: 30px;
+        label{margin-left: -150px; width: 150px;float: left; text-align: right; line-height: 30px; height: 30px;}
+        .error{
+            border: 1px solid $color_r;
+        }
+        input{
+            width: 240px; padding: 0px 6px;
+        }
+        .green-btn{
+            padding: 0px 12px 0px 16px
+        }
+        .s{width: 100px;}
+        em.error{color: $color_r; font-size: 12px; font-style: normal; margin:0px 5px; border:0px;}
+    }
+}

@@ -1,0 +1,18 @@
+.sc-faver{
+	.title{
+		padding: 10px 20px; background: #f8f8f8;
+	}
+	.nogoods{
+		text-align: center; padding: 20px; display: block;
+	}
+	.faverlist{
+		width: 260px; padding-left:25px;
+		li{
+			float: left; margin:20px 25px 5px 0px;
+			img {border: 1px solid #f2f2f2;width: 100px;}
+		}
+	}
+	.cashier{padding: 0px 10px; margin-top: 20px;
+		.red-btn{width:200px; text-align: center; font-size: 14px;}
+	}
+}

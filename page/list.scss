@@ -1,0 +1,169 @@
+@import "../G" ;
+@import "../components/page" ;
+$width: 1200px;
+.w{width: $width; margin: 0px auto;}
+@mixin filters($width) {
+	background: #f5f5f5;  border: 1px solid #e5e5e5; font-size: 12px;
+	.iconfont{font-size: 12px!important;}
+	.filter{
+		float: left; width: $width; line-height: 30px;
+		span{
+			float: left; display: block; color: #999; width: 120px; text-align: right; margin-top: 10px;
+		}
+		ul{
+			width: $width - 270px; float: left; padding: 10px 20px; background: #fff; height: 46px; overflow-y: hidden;
+			li{
+				float: left; margin:0px 10px 5px 0px;
+				a{color: #666; display:block; border:1px solid #fff; padding: 0px 20px; line-height:20px; height: 20px; white-space:nowrap;}
+				a.on{
+					border:1px solid $color_g; color: $color_g; background:#EEF8E4; padding:0px 8px; line-height:20px; height: 20px;
+				}
+			}
+		}
+		em.filter-operate{
+			float: right; font-style: normal; cursor: pointer; margin-right: 20px; margin-top: 10px; color: #999;
+		}
+		em.more{ display: block; }
+		em.end{display: none;}
+	}
+	.on{
+		ul{
+			height: 72px; overflow-y: scroll;
+		}
+		em.more{ display: none;}
+		em.end{display: block;}
+	}
+	.logo{
+		border-top: 1px solid #e5e5e5;
+	}
+}
+
+.wl{
+	$l-width: 990px;
+	width: $l-width;
+	.filters{
+		@include filters($l-width);
+	}
+	.left-goods-list{
+		padding-bottom: 30px;
+		ul{
+			@include createRow(4, 990px);
+			.wrap{
+				border: 1px solid #ddd; padding: 10px;
+				img{width: 220px; height: 220px;}
+				a{
+					display: block; font-size: 12px;
+				}
+				p{text-align:left; color:#666; margin:5px; line-height: 16px;
+					em{font-size:16px; color:$color_r; font-style:normal;}
+					del{margin-left:10px;}
+				}
+				.color_r{height: 16px; overflow: hidden;}
+				.name{
+					overflow: hidden; height: 32px;
+				}
+				.add-cart{
+					height: 22px; line-height: 22px; text-align: center; border: 1px solid #ccc;
+				}
+			}
+
+			li:hover{
+				.wrap{
+					border: 1px solid $color_g;
+					.name{
+						color: $color_g;
+					}
+					.add-cart{
+						background: $color_g; color: #fff; border: 1px solid $color_g;
+					}
+				}
+			}
+		}
+	}
+}
+.wr{
+	width: 200px;
+	dl{
+		margin-bottom: 10px; border: 1px solid #e5e5e5;
+		dt{
+			line-height: 30px; font-size: 14px; font-weight: bold; background: #f5f5f5; padding: 0px 10px; color: #666;
+		}
+		dd{
+			border-top: 1px solid #e5e5e5; font-size: 12px;
+			a{ color: #666; display: block; padding: 10px 0px; text-align: center; }
+		}
+	}
+	.goods{
+		img{ width: 180px;}
+		p{text-align: left; color: #666; margin-top: 5px; line-height: 18px; overflow: hidden; padding: 0px 10px;
+			em{font-size:16px; color:$color_r; font-style:normal;}
+		}
+	}
+}
+.title{
+	height: 30px; line-height: 30px; overflow: hidden; margin-bottom:-10px;font-size: 26px; font-family: $font_weiruan; color:$color_g; height: 30px; line-height: 30px;
+	em{
+		height: 10px; border:4px solid $color_g; line-height: 10px; margin-right: 10px;
+	}
+}
+.list-null{
+	background: url('list-null.jpg') no-repeat; padding-left: 100px; margin: 100px auto; width: 400px;
+}
+.goods-filters{
+	@include filters($width);
+}
+.goods-list-w{
+	padding-bottom: 50px;
+	ul{
+			@include createRow(5, $width);
+			.wrap{
+				border: 1px solid #ddd; padding: 10px;
+				img{width: 210px; height: 220px;}
+				a{
+					display: block; font-size: 12px;
+				}
+				p{text-align:left; color:#666; margin:5px; line-height: 16px;
+					em{font-size:16px; color:$color_r; font-style:normal;}
+					del{margin-left:10px;}
+				}
+				.color_r{height: 16px; overflow: hidden;}
+				.name{
+					overflow: hidden; height: 32px;
+				}
+				.add-cart{
+					height: 22px; line-height: 22px; text-align: center; border: 1px solid #ccc;
+				}
+			}
+
+			li:hover{
+				.wrap{
+					border: 1px solid $color_g;
+					.name{
+						color: $color_g;
+					}
+					.add-cart{
+						background: $color_g; color: #fff; border: 1px solid $color_g;
+					}
+				}
+			}
+		}
+}
+.show_brand{
+	width: $width - 50px;
+    border: 5px solid #f5f5f5;
+    padding: 20px;
+    input{
+    	line-height: 28px; height: 28px; width: 200px; border: 1px solid #ccc; padding:0px 4px;
+    }
+}
+
+.brands{
+	width: $width + 40px;
+	li{
+		width: 377px; height: 120px; float: left; background: #f5f5f5; margin: 0px 20px 20px 0px; padding: 5px;
+		img{width: 104px; height: 52px; margin-top: 20px;}
+		a{display: block; background: #fff;padding: 15px; color: #666;
+			.t{width: 232px;word-wrap:break-word; height: 90px; overflow: hidden;}
+		}
+	}
+}

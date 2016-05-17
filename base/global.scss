@@ -1,0 +1,50 @@
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,select,textarea,th,td,span {margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6 {font-size:100%;}
+ul,ol,li {list-style:none;}
+a {text-decoration:none;cursor:pointer;}
+a:hover {text-decoration:none;}
+fieldset,img {border:0;}
+button,input,select,textarea {font-size:100%;outline:none;}
+img {vertical-align:top;display:inline-block;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video {display:block;margin:0;padding:0;}
+object,embed {outline:0;}
+.hide {display:none;}
+
+/* text-align */
+.tac {text-align:center;}
+.tar {text-align:right;}
+.tal {text-align:left!important;}
+.lh28{line-height:28px;}
+/*	clear	*/
+.clearfix:after{content:".";display:block;height:0;line-height:0;clear:both;visibility:hidden;font-size:0;}
+.clearfix{*zoom:1;}
+.clear{clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0;}
+
+/*	float	*/
+.fl {float:left; display:inline;}
+.fr {float:right; display:inline;}
+
+/*	font	*/
+.fw{font-weight:bold;}
+.fwnm {font-weight:normal!important;}
+$fontsize : 12,14,16,18,20,22,24,30;
+@each $i in $fontsize {
+	.fs#{$i} {font-size:#{$i}px!important;}
+}
+
+$ary: 5,10,15,20,30;
+@each $i in $ary {
+	.blank#{$i}{height:#{$i}px;clear:both;font-size:1px;overflow:hidden;}
+
+	.m#{$i} {margin:#{$i}px;}
+	.mt#{$i} {margin-top:#{$i}px;}
+	.mr#{$i} {margin-right:#{$i}px;}
+	.ml#{$i} {margin-left:#{$i}px;}
+	.mb#{$i} {margin-bottom:#{$i}px;}
+
+	.p#{$i} {padding:#{$i}px;}
+	.pt#{$i} {padding-top:#{$i}px;}
+	.pr#{$i} {padding-right:#{$i}px;}
+	.pl#{$i} {padding-left:#{$i}px;}
+	.pb#{$i} {padding-bottom:#{$i}px;}
+}

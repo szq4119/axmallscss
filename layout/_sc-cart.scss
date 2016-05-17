@@ -1,0 +1,22 @@
+.sc-cart{
+	.title{
+		padding: 10px 20px; background: #f8f8f8;
+	}
+	.nogoods{
+		text-align: center; padding: 20px; display: block;
+	}
+	.goodslist{
+		width: 260px; padding: 0px 10px;
+		li{
+			width: 260px; height: 62px; border-bottom: 1px dotted #ddd; padding: 10px 0px;
+			img {border: 1px solid #f2f2f2;width: 60px;}
+			.name{
+				float: right; width:190px; line-height: 16px; height: 32px; overflow: hidden; color:$color_b;
+			}
+			.num{float: right; width: 190px; margin-top: 5px;}
+		}
+	}
+	.cashier{padding: 0px 10px; margin-top: 20px;
+		.red-btn{width:200px; text-align: center; font-size: 14px;}
+	}
+}

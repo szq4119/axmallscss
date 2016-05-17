@@ -1,0 +1,355 @@
+@import "../G";
+@import "../components/button";
+@import "../components/page";
+@import "../components/star";
+$member_icon : 'index_banner.png';
+body{
+	font-size: 12px;
+}
+
+$width: 1200px;
+.w{
+	width: $width; margin: 0px auto;
+}
+em.error{color: $color_r; font-style: normal; display: none; margin-left: 5px;}
+.table{
+	width: 100%;
+	th{background: #f5f5f5; height: 30px; padding: 0px 10px; font-weight: normal;}
+	.name{
+		width: 480px;
+	}
+	td{
+		height: 30px;
+	}
+}
+.tab_link{margin: 10px 0px; height: 30px;border-bottom: 2px solid $color_g;
+	a{display:block; padding: 0px 40px; height: 30px; line-height: 30px;  float: left; color:#333; background: #F5F5F5;}
+	.on{background: $color_g; color:#fff;}
+	.bgfff{background: #fff;}
+}
+.line{
+	border-bottom: 1px solid #ccc; margin-bottom: 10px;
+}
+
+.form{
+	padding-left: 100px;
+	.item{
+		text-align: left;padding: 8px 0px;
+		label{margin-left: -100px; width: 80px;float: left; text-align: right; line-height: 30px; height: 30px;}
+		.regions{
+			float: left; margin-right: 5px;
+		}
+		.form_text{
+			border: 1px solid #DEDEDE;width: 200px;height: 18px;line-height: 18px;padding:5px;font-size: 14px;
+		}
+		select{font-size: 14px; padding: 2px;}
+		.error{
+			border: 1px solid $color_r;
+		}
+		.form_radio{
+			vertical-align:middle;margin:-3px 2px 0px 0px;margin-right:4px;width:15px;border:0px;
+		}
+		.form-region{
+			line-height: 30px; height: 30px; width: 368px; background: #fff; border: 1px solid #DEDEDE; position: relative; cursor: pointer; padding: 0px 8px;
+			s{
+				    width: 0; height: 0; border-width: 5px; border-style: solid;border-color: #666 transparent transparent transparent;position: absolute;top: 14px; right: 10px;
+			}
+		}
+		textarea{
+			width: 385px; height: 76px; border: 1px solid #DEDEDE;
+		}
+		.s{width: 100px;}
+		.l{width: 300px;}
+		em.error{color: $color_r; font-size: 12px; font-style: normal; margin:0px 5px; border:0px;}
+	}
+}
+.cancel_order_form{
+	text-align: center;line-height: 20px;
+}
+.member_center{
+	background: #F5F5F5; border: 1px solid #F5F5F5;
+	.mc_right{
+		width: 1000px; min-height: 800px; margin-left: 160px; background: #fff; padding: 20px;_padding: 15px;
+		.mbr_top{
+			border-top: 3px solid $color_g; background: #F7FCF1; width: 970px; padding: 15px;
+			h3{font-family: $font_weiruan; font-size: 18px; margin-bottom: 10px;}
+		}
+		.general_table{
+			background: #F5F5F5;
+			td{height: 40px; background: #fff; padding: 0px 10px;}
+		}
+		//order
+		.order_list{
+			@extend .general_table;
+			td{height: 80px}
+			.name{width: 360px;}
+			.logistics{
+				s{
+ 					width:0; height:0; border-width:8px; border-style:solid; border-color: transparent transparent $color_g transparent; position: absolute; top:-16px;left: 16px;
+ 					i{
+ 						position: absolute; width:0; height:0; border-width:8px; border-style:solid; border-color: transparent transparent #fff transparent; position: absolute; top:-6px;left: -8px;
+ 					}
+				}
+				border: 2px solid $color_g; position: absolute; background: #fff;  width: 160px; height: 50px; padding: 10px; line-height: 25px; left: 100px; top:30px; display: none;
+			}
+		}
+		//evaluate
+		.evaluate_list{
+			@extend .general_table;
+			td{height: 80px; line-height: 20px;}
+		}
+		//evaluate_wait
+		.evaluate_wait_list{
+			border:1px solid #f5f5f5; margin-top: -10px;
+			li{
+				border-bottom:1px solid #f5f5f5; cursor: pointer;border-top:1px solid #fff; border-left:1px solid #fff; border-right:1px solid #fff;
+				tr{
+					border:1px solid #f5f5f5;
+				}
+				td{height: 80px; background: #fff; padding: 0px 10px; line-height: 20px;}
+				.pingjia{
+					padding: 20px 20px 10px 20px; background: #F7FCF1; display: none;
+					div{
+						label{margin-right: 10px; cursor: pointer;}
+						textarea{
+							width:685px; height: 140px;vertical-align: top;
+						}
+					}
+					.comment_error{display: none;}
+					.submit{
+						height: 30px; width: 680px; margin: 10px 70px; line-height: 30px;
+					}
+				}
+				.judgment{
+					padding: 20px; background: #F7FCF1;
+					div{
+						margin-left: 80px;
+						span{margin-left: -80px; float: left;}
+						label{margin-right: 10px; cursor: pointer;}
+						textarea{
+							width:685px; height: 140px;vertical-align: top;
+						}
+					}
+					.comment_error{display: none;}
+					.imglist{
+						margin-top: 5px;
+						li{
+							float: left; position: relative; margin-right: 10px; width: 54px; height: 54px;
+							i{font-size: 16px; color:$color_r; position:absolute; top: -5px; right: -5px;}
+							img{width: 50px; height: 50px; border: 1px solid #ddd; padding: 1px; margin-right: 5px;}
+						}
+					}
+					.submit{
+						position: relative;
+						.sharepic{padding: 5px 10px; background: $color_r; color:#fff; width:40px; height: 20px; line-height:20px; display: block; text-align: center;}
+						input{height: 40px; line-height: 40px; margin-left: -110px !important;}
+						.ora_btn{
+							position: absolute; top:0px; right: 0px;
+						}
+					}
+				}
+			}
+			li:hover{
+				background: #f5f5f5;
+				td{background: #f5f5f5;}
+			}
+			li:active{
+				background: #f2f2f2;
+				td{background: #f2f2f2;}
+			}
+			li.on{
+				.pingjia{
+					display: block;
+				}
+			}
+		}
+		//collect
+		.collectlist{
+			ul{ width: 110%;
+				li{
+					width: 180px;  margin:0px 10px 10px 0px; margin-left: 0px; float: left;padding:10px; border: 1px solid #F5F5F5;
+					p{color:#666;}
+					.name{
+						line-height: 16px; height: 32px; overflow:hidden; margin: 5px 0px;
+					}
+					img{width: 180px; height: 180px;}
+					.add_cart{border: 1px solid #ccc; text-align: center; line-height: 20px; width:130px ; padding: 5px 25px; color:#666; margin-right: 10px;}
+					.add_cart:hover{border: 1px solid $color_r; background: $color_r; color:#fff;}
+					.del_collect{cursor: pointer;}
+
+				}
+			}
+		}
+		//cash_card
+		.mt_cash_card{
+			.cardinput{display: inline;
+				input{width: 80px;}
+			}
+			.vip_card_form{
+				.vip_card{display: inline;
+					// input{
+					// 	border: 1px solid #DEDEDE;width: 200px;height: 18px;line-height: 18px;padding:5px;font-size: 14px;
+					// }
+					color:#666;
+					input{
+						width: 300px; line-height: 16px; height: 20px; padding: 2px 0px; text-align: left; padding: 0px 4px;
+					}
+					b{font-weight: normal; display: none;}
+				}
+			}
+		}
+		//score
+		.mt_score{
+			 height: 70px; margin-bottom: 10px;
+		}
+		//address
+		.mt_address{
+			.form{
+				margin-left: 60px;
+				label{width: 60px; margin-left:-60px;text-align: right; float: left;}
+				.area{
+					display: inline;
+					select{
+						line-height: 18px; border: 1px solid #CCC; padding: 5px;
+					}
+				}
+			}
+		}
+		//security
+		.mt_security{
+			height: 30px; color:#666; padding-top: 30px; margin-bottom: 20px;
+			.sec_l_icon{ display: inline-block; *display: inline; *zoom:1;
+				i{ background:#D9D9D9; width: 30px; height: 10px; display: inline-block; *display: inline; *zoom:1; margin-right: 4px;}
+			}
+			.sec_level_1{
+				i.s1{background: $color_r;}
+			}
+			.sec_level_2{
+				i.s1{background: $color_y;}
+				i.s2{background: $color_y;}
+			}
+			.sec_level_3{
+				i.s1{background: $color_g;}
+				i.s2{background: $color_g;}
+				i.s3{background: $color_g;}
+			}
+		}
+		//security_list
+		.security_list{
+			border:1px solid #f5f5f5;
+			td{height: 80px;}
+		}
+		//orderdetail
+		.orderdetail{
+			border: 1px solid #f2f2f2; width: 958px; margin-top: -10px;  padding: 30px 20px;
+			h3{line-height: 25px;}
+			.table{
+				width: 100%;border:1px solid #f5f5f5; margin-top: 20px;
+				th{background: #f5f5f5; height: 30px; padding: 0px 10px; font-weight: normal;}
+				.numchange{
+					button{width: 20px; height: 25px; background: #f5f5f5; border: 1px solid #E5E5E5;}
+					input{ line-height: 23px; border: 1px solid #E5E5E5; text-align: center; width: 50px; border-left: 0px; border-right: 0px;}
+				}
+			}
+		}
+		.line{border-bottom: 1px dotted #ccc; height: 10px; margin-bottom: 10px;}
+	}
+	.mc_left{
+		float: left; width: 160px;
+		dl{
+			margin-top: 10px;
+			a{color:#333;}
+			dt{line-height: 35px; padding-left: 10px; font-weight: bold;}
+			dd{line-height: 30px; padding-left: 20px;}
+			.on{
+				background: $color_g;
+				a{color: #fff;}
+			}
+		}
+		.line{border-bottom: 1px dashed #ccc; height: 10px; margin: 0px 10px;}
+	}
+}
+.pop_body{
+	.bindcard{
+		.item{text-align: left;
+			.cardinput{display: inline;
+				input{width: 80px;}
+			}
+		}
+	}
+	.verifemail{line-height: 45px;}
+}
+$progress : 'progress.png';
+.progress{
+	height: 40px; line-height: 40px; background: #CCCCCC; width: 1025px;
+	a{
+		color: #fff; height: 40px; line-height: 40px; display: inline-block; width: 165px; float: left; padding-left: 10px; font-size: 14px; position: relative;padding-left:40px;margin:0px 20px 0px -20px; cursor: default;
+		.iconfont{font-size: 26px; margin-right: 5px; float: left;}
+		s{
+			float:right;background: url($progress) 0px -40px; width: 20px; height: 40px; position: absolute; top:0px; right: -20px; z-index: 10;
+		}
+	}
+	a.on{
+		background: #93CA57;
+		s{
+			background: url($progress);
+		}
+	}
+}
+.changepassword{
+	padding-left: 120px;
+	.item{text-align: left;}
+}
+.bind-card-form{
+	padding-left: 100px;
+}
+#addressform{
+	margin-left: 0px; padding-left: 100px;
+}
+.region-box{
+	position: absolute; top: 24px; left: 10px; width: 400px; border: 1px solid #ddd; background: #fff; display: none; padding-top: 26px;
+	.region-tab{
+		width: 100%; position: absolute; top: 0px; left: 0px; z-index: 10;
+		a{
+			width: 60px; display: block; line-height: 26px; height: 26px; float: left; text-align: center;  border-right: 1px solid #ddd;background: #ddd;
+		}
+		.on{
+			background: #fff;  height: 27px;
+		}
+		.region-close{
+			border: 0px; background-color: #fff; margin: 4px; line-height: 16px; height: 16px; cursor: pointer; color: #666;
+		}
+	}
+	.region-options{
+		height: 100px; overflow-y: scroll; padding: 10px; font-size: 12px;border-top: 1px solid #ddd;
+		a{ float: left; display: block;  padding: 0px 8px; line-height: 26px;  white-space:nowrap;}
+		a:hover{
+			background: #EEF8E4;
+		}
+		a.on{
+			background: $color_g; color: #fff;
+		}
+	}
+}
+
+.reportform{
+	textarea{
+		width: 590px; height: 150px; border: 1px solid #ddd;
+	}
+	.uploadimgs{
+		li{
+			position: relative; width: 65px; height: 65px; float: left; margin:0px 10px 10px 0px;
+			i{
+				display: block; font-size: 18px; color: #999; position: absolute; top: -10px; right: -10px; cursor: pointer;
+			}
+			img{
+				width: 60px; height: 60px; border: 1px solid #ddd; padding: 1px;
+			}
+		}
+		
+	}
+}
+
+.invite_input{
+	line-height:20px; height:20px; width: 400px; margin-right: 10px; padding: 4px 6px; color: #666;
+}

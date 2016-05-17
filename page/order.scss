@@ -1,0 +1,497 @@
+@import "../G" ;
+@import "../components/page" ;
+
+$width: 1000px;
+.w{width: $width; margin: 0px auto;}
+
+.line{border-top:2px solid #ddd;}
+
+b.tip{border: 1px solid #EDD28B; font-weight: normal; padding: 5px; color: #FF7700; font-size: 12px; position: relative; background: #FFFDEE; margin-right: 20px;
+	s{
+		width: 0;height: 0;border-width: 8px;border-style: solid;border-color: transparent  transparent transparent #EDD28B;position: absolute;top: 2px;right: -16px;
+		i{
+			width: 0;height: 0;border-width: 6px;border-style: solid;border-color: transparent  transparent transparent #FFFDEE;position: absolute;top: -6px;right: -4px;
+		}
+	}
+}
+.product-item{
+	.pi-title{
+		font-size: 18px; margin-top: 20px;
+	}
+	.pi-table{
+		width: 100%; border-collapse:collapse; border: 1px solid #eee;
+		tr{
+			th{
+				background: #f7f7f7; font-weight: normal; line-height: 30px; border-bottom: 1px solid #eee;
+			}
+			td{
+				text-align: center; border-bottom: 1px solid #eee; height: 80px;
+				.del{
+					cursor: pointer; font-size: 16px;
+				}
+			}
+			.name{
+				text-align: left;
+				a{color: #666;}
+			}
+			.changenum{
+				button{width: 30px; height: 24px; border: 1px solid #ddd; background: #fff; float: left; text-align: center; font-size: 18px; line-height: 20px; cursor: pointer; }
+				input{width: 40px; height: 22px; border: 1px solid #ddd; padding: 0px; float: left; text-align: center; border-right: 0px; border-left: 0px;}
+			}
+			.package{
+				padding: 10px 0px; overflow: hidden;
+				table{
+					width: 960px; border-collapse:collapse;
+					th{background: #fff; border: 0px;}
+					td{border: 0px; background: #EEF8E4;}
+				}
+			}
+		}
+		.cart-activity{
+			background: #f5f5f5;
+			td{
+				height: 40px; line-height: 40px;
+			}
+		}
+	}
+	.pay-wrap{
+		text-align: right; margin-bottom: 20px; border: 1px solid #eee; border-top: 0px; background: #f7f7f7;
+		table{float: right; margin-right: 20px;
+			td{
+				height: 30px;
+			}
+		}
+	}
+}
+
+.goods-list{
+	@include createRow(5,$width); margin-bottom: 20px;
+	li{
+		a{display:block; border:1px solid #e5e5e5; background:#fff; text-align:center; padding: 5px 5px 10px 5px; font-size: 12px;
+			img{width: 180px;}
+			p{text-align:left; color:#666; margin-top:10px; line-height: 16px; overflow: hidden; padding: 0px 5px;
+				em{font-size:16px; color:$color_r; font-style:normal;}
+				del{margin-left:10px;}
+			}
+			.name{
+				overflow: hidden; height: 32px;
+			}
+		}
+	}
+}
+.goods-list-w{
+	padding-bottom: 50px;
+	.title{
+		line-height: 40px; border-top: 2px solid $color_g; font-size: 16px; color: $color_g;
+	}
+	ul{
+		@include createRow(4, $width);
+		.wrap{
+			border: 1px solid #ddd; padding: 10px;
+			img{width: 220px; height: 220px;}
+			a{
+				display: block; font-size: 12px;
+			}
+			p{text-align:left; color:#666; margin:5px; line-height: 16px;
+				em{font-size:16px; color:$color_r; font-style:normal;}
+				del{margin-left:10px;}
+			}
+			.color_r{height: 16px; overflow: hidden;}
+			.name{
+				overflow: hidden; height: 32px;
+			}
+			.add-cart{
+				height: 22px; line-height: 22px; text-align: center; border: 1px solid #ccc;
+			}
+		}
+
+		li:hover{
+			.wrap{
+				border: 1px solid $color_g;
+				.name{
+					color: $color_g;
+				}
+				.add-cart{
+					background: $color_g; color: #fff; border: 1px solid $color_g;
+				}
+			}
+		}
+	}
+}
+
+
+.cart-title{
+	font-family: $font_weiruan;  font-size: 20px; margin:10px 0px; padding:0px 5px;
+}
+.cart-null{
+	background: url('cart-no.jpg') no-repeat; padding-left:100px; height: 80px; margin: 200px auto; width:400px; font-size: 20px; line-height: 40px;
+
+}
+.table{
+	width: 100%;background: #F5F5F5; border: 1px solid #f5f5f5; border-bottom:0px;
+	th{background: #f5f5f5; height: 35px; padding: 0px 20px; font-weight: normal;line-height: 35px;}
+	td{
+		background: #fff; border-bottom:1px solid #f5f5f5; height: 40px; padding:0px 10px;
+		.name{
+			width: 500px; margin-top: 30px; margin-left: 10px;
+		}
+		img{padding: 25px 0px; width: 60px; height: 60px;}
+		.goods_gift{
+			position: absolute; bottom:0px; left:70px; color:#999; height: 30px; line-height: 15px;
+		}
+		a{color: #333;}
+	}
+	.numchange{
+		button{width: 20px; height: 25px; background: #f5f5f5; border: 1px solid #E5E5E5;}
+		input{ line-height: 23px; border: 1px solid #E5E5E5; text-align: center; width: 50px; border-left: 0px; border-right: 0px; height: 23px;}
+	}
+	.promotion{
+		line-height: 20px; position: relative;
+		.t{
+			border: 1px solid $color_r; width: 50px; position: relative;  z-index: 10; height: 25px; background: #fff; padding: 0px 10px; line-height: 25px; color: $color_r;
+		}
+		.list{
+			width: 300px; border: 1px solid $color_r; text-align: left; line-height: 25px; padding: 5px 10px; position: absolute; top:25px; left: 0px; background: #fff; z-index: 9; display: none;
+		}
+	}
+	.on{
+		.t{
+			border-bottom: 1px solid #fff;
+		}
+		.list{
+			display: block;
+		}
+	}
+	.end{
+		td{
+			background: #f5f5f5; line-height: 30px; padding: 10px;
+			.submit-btn{color:#fff;}
+		}
+	}
+	.goods-onsale{
+		td{padding:0px;}
+		table{
+			width: 100%; border:0;margin:0;border-collapse:collapse;border-spacing:0;
+			.goods-onsale-item{
+				td{
+					background:#EFF8E3;
+					.numchange{
+						input{
+							border: 1px solid #E5E5E5; background:#f2f2f2;
+						}
+					}
+				}
+
+			}
+		}
+	}
+}
+.progress{
+	background:url(progress.gif); width: 855px; height: 59px; margin: 30px auto 0px auto;
+	@mixin curpro($value){
+		background:url(progress.gif) 0px 59px; height: 59px; width: $value;
+	}
+	.cart{
+		@include curpro(240px);
+	}
+	.order{
+		@include curpro(630px);
+	}
+}
+.add-buy{
+	float: left;
+	li{background: #F5F5F5; line-height: 30px; padding: 0px 10px; margin-top: 10px; color: #333;}
+}
+
+.box_title{ height: 30px; line-height: 30px;
+	h3{float: left;}
+}
+
+.form{
+	padding-left: 100px;
+	.item{
+		text-align: left;padding: 8px 0px; line-height: 30px;
+		label{margin-left: -100px; width: 80px;float: left; text-align: right; line-height: 30px; height: 30px;}
+		.regions{
+			float: left; margin-right: 5px;
+		}
+		.form_text{
+			border: 1px solid #DEDEDE;width: 200px;height: 18px;line-height: 18px;padding:5px;font-size: 14px;
+		}
+		select{font-size: 14px; padding: 2px;}
+		.error{
+			border: 1px solid $color_r;
+		}
+		.form_radio{
+			vertical-align:middle;margin:-3px 2px 0px 0px;margin-right:4px;width:15px;border:0px;
+		}
+		.form-region{
+			line-height: 30px; height: 30px; width: 378px; border: 1px solid #DEDEDE; position: relative; cursor: pointer; padding: 0px 8px;
+			s{
+				    width: 0; height: 0; border-width: 5px; border-style: solid;border-color: #666 transparent transparent transparent;position: absolute;top: 14px; right: 10px;
+			}
+		}
+		textarea{
+			width: 385px; height: 76px; border: 1px solid #DEDEDE;
+		}
+		.s{width: 100px;}
+		.l{width: 300px;}
+		em.error{color: $color_r; font-size: 12px; font-style: normal; margin:0px 5px; border:0px;}
+	}
+}
+.region-box{
+	position: absolute; top: 24px; left: 10px; width: 400px; border: 1px solid #ddd; background: #fff; display: none; padding-top: 26px;
+	.region-tab{
+		width: 100%; position: absolute; top: 0px; left: 0px; z-index: 10;
+		a{
+			width: 60px; display: block; line-height: 26px; height: 26px; float: left; text-align: center;  border-right: 1px solid #ddd;background: #ddd;
+		}
+		.on{
+			background: #fff;  height: 27px;
+		}
+		.region-close{
+			border: 0px; background-color: #fff; margin: 4px; line-height: 16px; height: 16px; cursor: pointer; color: #666;
+		}
+	}
+	.region-options{
+		height: 100px; overflow-y: scroll; padding: 10px; font-size: 12px;border-top: 1px solid #ddd;
+		a{ float: left; display: block;  padding: 0px 8px; line-height: 26px; white-space:nowrap;}
+		a:hover{
+			background: #EEF8E4;
+		}
+		a.on{
+			background: $color_g; color: #fff;
+		}
+	}
+}
+.addresslist{
+	padding-top:10px;
+	li{ line-height: 26px; padding-left: 10px; width: 960px; border: 1px solid #eee; margin-bottom: 10px; padding: 10px 20px;
+		input{
+			float: left; margin-top: 10px;
+		}
+		.address-info{
+			float: left; margin-left: 20px; width: 800px;
+		}
+		.address-operation{
+			float: left; color: #ddd;
+		}
+	}
+	li:hover{
+		background: #EEF8E4;
+	}
+}
+
+.card{
+	border: 1px solid #eee;
+	.title{
+		background: #f5f5f5; padding: 5px 10px;
+	}
+	.bind_card{
+		padding: 0px 20px;
+	}
+}
+
+.giftlist{
+	margin: 10px 10px 0px 10px; width: 1020px;
+	li{
+		float: left; margin: 0px 8px 8px 0px; padding: 4px; border: 1px solid #fff; position: relative;
+	}
+	$ary : 100,200,500,1000;
+	@each $i in $ary{
+		.gift_#{$i}{
+			background: url(gift.gif); background-position-x: 0;background-position-y: -(index($ary,$i)*92px - 92px); display: block; width: 230px; height: 92px; position: relative;
+			span{
+				position: absolute; top:50px; left: 20px; display:block; width:120px; height:40px; line-height: 20px; font-size: 12px; color: #ddd;
+				p{color: #333; font-size: 18px;}
+			}
+		}
+	}
+	li:hover{
+		border: 1px solid #ccc; opacity: .8;
+	}
+	li.on{
+		border: 1px solid $color_b;
+		s{
+			background: url("card_checked.png") right bottom no-repeat; width: 30px; height: 30px; display: block; position: absolute; bottom: 0px; right: 0px; z-index: 10;
+		}
+	}
+}
+.coupon{
+	position: relative; margin: 10px 0px 0px 20px; margin-bottom: 20px; width: 300px;
+	.selected{
+		width: 300px; height: 35px; line-height: 35px; display:block; position: relative; border: 1px solid #ccc; padding: 0px 10px; font-size: 12px; color: #999; z-index:  1001; background: #fff;
+		font{
+			color: #666; margin-right: 10px;
+		}
+		s{
+			width: 0;height: 0;border-width: 5px;border-style: solid;border-color: #666 transparent transparent transparent;position: absolute;top: 15px;right: 14px;
+		}
+	}
+	.couponlist{
+		position:absolute; border: 1px solid #ccc; background: #fff; z-index:  1000; top: 35px; left: 0px; width: 320px; font-size: 12px; color: #999; display: none;
+		li{
+			line-height: 40px; border-bottom: 1px dotted #eee; border-top: 1px dotted #ccc; padding: 0px 10px; cursor: pointer; position:relative; height: 40px;
+			.radio{
+				position: absolute; right: 5px; top: 15px;
+			}
+			span{display:block; height: 40px; line-height: 40px;}
+			font{
+				color: #666; margin-right: 10px;
+			}
+		}
+		li:hover{
+			background: #EEF8E4;
+		}
+	}
+}
+.coupon:hover{
+	.couponlist{display: block;}
+}
+
+.bind_card{
+	margin-bottom: 10px;
+	.form{
+		display: none;
+	}
+
+}
+textarea{
+	border: 1px solid #ddd; padding: 0px 5px;
+}
+.pay-info{
+	background: #F5F5F5; position: relative; padding: 20px; position: relative;
+	.pi-alipay{
+		position: absolute; top: 40px; left: 40px; background:url('alipay.gif'); width: 88px; height: 30px;
+	}
+	.counttable{margin-top: 10px; line-height: 22px; width: 300px;
+		td{text-align: right;width:150px;}
+	}
+}
+.pay-addressinfo{
+	position:relative; color: #999; font-size: 12px;
+	.tip{
+		position: absolute; top: 5px; right: 280px; height: 12px; line-height: 12px; font-size: 12px;
+	}
+}
+.order-slogan{
+	background: url('order-slogan.jpg'); width: 1000px; height: 112px;
+}
+
+.upload-tip{
+	border: 1px solid #EDD28B; font-weight: normal; padding: 5px; color: #FF7700; font-size: 12px; position: relative; background: #FFFDEE; padding: 10px; margin: 20px 0px;
+	.ut-word{
+		width: 500px;
+	}
+	.ut-service{
+		width: 250px; position: absolute; right: 0px; top: 10px; text-align: center; font-size: 14px; line-height: 20px;
+		a{color: #666;}
+	}
+}
+.orderinfo{
+	background: #f5f5f5; width: 100%; margin-top: 5px;
+}
+.uploadcard-form{
+	padding-left: 300px !important; margin-top: 30px;
+}
+.uploadcard{
+	iframe{
+		display: none;
+	}
+	.upload{
+		width: 160px; height: 100px; float: left; border: 3px solid #ddd; position: relative;
+		a{
+			display: block; line-height: 100px; text-align: center; color: $color_ora; position: relative; z-index: 1000;
+		}
+		img{
+			position: absolute; top: 0px; left: 0px; width: 160px; height: 100px; z-index: 10; display:none;
+		}
+		span.cover{
+			position: absolute; top: 0px; left: 0px; width: 160px; height: 100px; z-index: 100; display: block; background: #fff; text-indent: -99999px; display: none;
+		}
+		div{
+			z-index: 9999;
+		}
+		input{
+			z-index: 9999; line-height: 96px;
+		}
+	}
+	.upload:hover{
+		a{
+			color: #fff; display: block!important; *color: $color_ora!important;
+		}
+		span.cover{
+			background: #333 !important; display: block!important; @include opacity(60);*display: none!important;
+		}
+	}
+	.loading{
+		a{
+			display: none;
+		}
+		img{
+			display: none;
+		}
+		span.cover{
+			background: url('loading.gif') center center no-repeat !important; line-height: 100px; text-align: center; text-indent: 0px !important;
+		}
+	}
+	.hasupload{
+		a{
+			display: none;
+		}
+		img{
+			display: block;
+		}
+		span.cover{
+			display: none;
+		}
+	}
+
+	.demo-fp{
+		background:url('demo-card.jpg'); width: 160px; height: 100px; float: left; margin-left: 40px;
+	}
+	.demo-bg{
+		background:url('demo-card.jpg') 0px -110px; width: 160px; height: 100px; float: left; margin-left: 40px;
+	}
+
+}
+.dline{
+	border-bottom: 1px dotted #dddddd;
+}
+// .success{
+// 	line-height: 30px; width: 400px; margin: 60px auto;
+// }
+// .warehouse{
+// 	border:5px solid #ddd; width: 330px; float: left; height: 200px; padding: 15px 20px; margin:0px 10px;
+// 	strong{display: block; line-height: 30px; margin-bottom: 10px;}
+// 	.title{
+// 		line-height: 30px; border-bottom: 1px dotted #ccc;
+// 	}
+// 	.item{
+// 		line-height: 25px; margin-top: 5px;
+// 	}
+// }
+
+// .tip{
+// 	color: $color_ora; border: 1px solid $color_ora; background: #FFFDEE; width: 1158px;line-height: 25px; margin: 20px auto; padding: 10px 20px;
+// 	a{text-decoration: underline;}
+// }
+// .step{
+// 	margin-top: 20px;
+// 	strong{
+// 		background: url('dot.png') 0px center no-repeat;  padding-left: 20px; height: 30px; line-height: 30px; display: block;
+// 	}
+// 	#idcard{
+// 		line-height: 40px; padding-left: 20px;
+// 		input{line-height:18px; padding: 4px;}
+// 	}
+// }
+// .upload-boxes{
+// 	margin: 10px 20px;
+// 	.upload-box{
+// 		float: left; width: 350px; margin:10px 100px;
+// 		.upload{
+// 			width: 340px; height: 200px; border: 5px solid #ddd;
+// 		}
+// 	}
+// }

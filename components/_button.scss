@@ -1,0 +1,60 @@
+$btn_bg : 'btn.png';
+@mixin button-base($height: 30px ,$diff: 4px, $padding: 30px ){
+	height: $height; line-height: $height; background: url($btn_bg) no-repeat; position: relative;display: inline-block; *display: inline;*zoom:1; border: 0px; color: #fff; cursor: pointer; padding:0px $padding - $diff 0px $padding;
+}
+@mixin button-s ($height: 30px, $diff: 4px){
+	background: url($btn_bg) no-repeat; height: $height;  position: absolute; width: $diff; top:0px; right:-$diff;
+}
+.green-btn{
+	$height: 30px;
+	$diff : 4px;
+	$padding: 30px;
+	@include button-base($height,$diff,$padding); background-position: 0px 0px;
+	s{
+		@include button-s($height, $diff); background-position: 0px -30px;
+	}
+}
+.red-btn{
+	$height: 30px;
+	$diff : 4px;
+	$padding: 30px;
+	@include button-base($height,$diff,$padding); background-position: 0px -60px;
+	s{
+		@include button-s($height, $diff); background-position: 0px -90px;
+	}
+}
+.addcart-btn{
+	$height: 38px;
+	$diff : 4px;
+	$padding: 30px;
+	@include button-base($height,$diff,$padding); background-position: 0px -125px; font-family: $font_weiruan; font-weight: bold; font-size: 20px;
+	s{
+		@include button-s($height, $diff); background-position: 0px -165px;
+	}
+}
+
+.submitbox .disable{
+	$height: 38px;
+	$diff : 4px;
+	$padding: 30px;
+	@include button-base($height,$diff,$padding); background-position: 0px -322px; font-family: $font_weiruan; font-weight: bold; font-size: 20px;
+	s{
+		@include button-s($height, $diff); background-position: 0px -362px;
+	}
+}
+
+.submit-btn{
+	$height: 35px;
+	$diff : 4px;
+	$padding: 30px;
+	@include button-base($height,$diff,$padding); background-position: 0px -205px; font-family: $font_weiruan; font-size: 16px;
+	s{
+		@include button-s($height, $diff); background-position: 0px -245px;
+	}
+}
+.btn{
+	background: url($btn_bg) 0px -290px no-repeat; line-height: 23px; border: 1px solid #ccc; padding: 0px 15px; cursor: pointer; color: #333; height: 25px;
+}
+.btn:active{
+	opacity: .8;
+}

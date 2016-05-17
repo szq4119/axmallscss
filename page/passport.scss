@@ -1,0 +1,76 @@
+@import "../G" ;
+
+$width: 1000px;
+.w{ width: $width; margin: 0px auto; }
+.form{
+    .item{
+        text-align: left; margin: 8px 0px; line-height: 32px; float: left; width: 300px; position: relative;
+        label{ width: 30px; height:32px; line-height:32px; float: left; text-align: center; background: #e5e5e5;
+            .iconfont{ margin: 0px; font-size: 18px; color: #fff;}
+        }
+        input{
+            width: 246px; line-height: 30px; height: 30px; padding: 0px 10px; border: 1px solid #e5e5e5;
+        }
+        .error{
+            border: 1px solid $color_r;
+        }
+        em.error{
+            color: $color_r; font-style: normal; margin:0px 5px; border:0px;position: absolute; right: 0px; top: 1px; background-color: #fff;height: 28px;line-height: 28px;
+        }
+        .form_radio{
+            vertical-align:middle;margin:-3px 2px 0px 0px;margin-right:4px;width:15px;border:0px;
+        }
+        .vcode{
+            input{
+                width: 120px;
+            }
+            .green-btn{
+                padding: 0px 21px 0px 25px;
+            }
+            em.error{
+                left: 80px; width: 85px;
+            }
+        }
+        .captcha{
+            input{
+                width: 120px;
+            }
+            em.error{
+                left: 50px; width: 85px;
+            }
+        }
+        .s{ width: 100px; }
+        .l{ width: 400px; }
+
+    }
+}
+.authcenter-body{
+    width: 1000px; margin: 40px auto; position: relative;
+    .signup-ad{
+        position: absolute; top: 0px; left: 0px;
+        background: url('passport.jpg') center center no-repeat; width: 500px; height: 444px;
+        img{
+            //width: 400px;
+        }
+    }
+    div.authcenter{
+        margin-left:  580px; height: 440px; width: 300px; border: 1px solid #e5e5e5; padding: 30px 60px;
+        border-top: 3px solid $color_g;
+        .title{
+            font-size: 20px; color: $color_g; font-family: $font_weiruan;
+        }
+        .submit-box{
+            margin: 8px 0px; float: left;
+            button{
+                height: 36px; line-height: 36px; background: url('btn.png') 0px -410px no-repeat; position: relative;display: inline-block; *display: inline;*zoom:1; border: 0px; color: #fff; cursor: pointer; width: 300px; font-size: 16px;
+                s{
+                    background: url('btn.png') 0px -446px no-repeat; height: 36px;  position: absolute; width: 4px; top:0px; right:-4px;
+                }
+            }
+
+        }
+    }
+    div.signin{
+        height: 300px;margin-bottom: 100px;
+    }
+}

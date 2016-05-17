@@ -1,0 +1,126 @@
+.w{
+	width: 1200px; margin: 0px auto;
+}
+.newyear2016{
+	background:url('./newyear2016/head-bg.png') repeat;
+	.site-head{
+		position:relative;
+		.sh-logo{
+			background: url('./newyear2016/logo.png') no-repeat; width: 160px; height: 70px; float: left; margin-right: 30px;
+		}
+		.sh-logo-ad{
+			width: 231px; height:115px;  position:absolute; top:-10px; left: 170px;
+		}
+		.sh-search{
+			float: right; margin-top:10px;
+			.ss-input{
+				width: 450px; height: 32px;  border: 2px solid #F32F1C;
+				input{
+					height: 30px; line-height: 30px; border: 0px; width: 350px; padding: 0px 5px;
+				}
+				button{
+					height: 32px; width: 90px; background: #F32F1C; border: 0px; color: #fff;
+				}
+			}
+			ul{
+				width: 450px; font-size:12px; margin-top:5px;
+				li{
+					float:left; margin-right:10px;
+					a{color: #666;}
+				}
+			}
+		}
+	}
+
+	.main-nav{
+		background: url('./newyear2016/nav-bg.png'); color: #fff; z-index: 1000; left:0px;
+		.mn-sort{
+			position: relative; float: left; z-index:999;
+			.mn-title{
+				background: url('./newyear2016/main-nav-bg.png'); color: #fff; width: 200px; height: 40px; font-size: 16px; line-height: 40px; float: left; text-align: center; font-family: $font_weiruan;
+			}
+			#showAllSort{cursor: pointer; top:40px !important;}
+			.mn-hook-hide{
+				position: absolute; top:40px; left: 0px; width: 248px; height: auto; background: #fff; border:1px solid #ccc; overflow: hidden;
+				.mn-hook{
+					dl{
+						border-bottom: 1px dotted #f2f2f2; padding:5px 10px; border-left:2px solid #fff; width:228px; margin: 0px;
+						dt{
+							font-size: 14px; font-weight: bold; line-height: 26px; height: 26px;
+							a{ color:#333; }
+						}
+						dd{
+							float: left;  line-height: 24px; margin-right: 15px; white-space:nowrap;
+							a{color: #666;}
+						}
+					}
+				}
+				.mn-hook dl:hover{
+					background: #fafafa; border-left: 3px solid $color_r; border-bottom: 1px dotted #f2f2f2; padding:5px 10px; width:226px; margin-left: -1px;
+				}
+				s{
+					width: 0; height: 0; border-width: 10px; border-style: solid; border-color:transparent transparent $color_b transparent; position: absolute; top: -20px; left: 110px;
+					i{
+						width: 0; height: 0; border-width: 9px; border-style: solid; border-color:transparent transparent #fff transparent; position: absolute; top: -7px; left: -9px;
+					}
+				}
+			}
+		}
+
+		.mn-nav{
+			float: left;
+			li{
+				float: left; height: 40px; line-height: 40px; position:relative;
+				a{display: block;padding: 0px 20px; font-size: 18px; color: #fff; font-family: $font_weiruan;}
+				.nav-tip{
+					background: url('mainnav-tip.png') no-repeat; width: 32px; height: 22px; position: absolute; right: 0px; top: -14px;  line-height: 16px;  font-style:normal; text-align: center;
+					font{
+						transform:scale(0.875); color: #FFD09C; -webkit-text-size-adjust: none; font-size: 8px;
+					}
+				}
+			}
+		}
+		.mn-tel{
+			float: right; color:#003F10; font-size:16px; line-height:40px; color: #fff; margin-right:20px;font-family: $font_weiruan;
+			.iconfont{
+				font-size: 20px;
+			}
+		}
+		.mn-cart{
+			float: right; background: url('cart.png'); width:140px; height:40px; line-height:40px; padding-left: 50px; color: $color_ora; font-size:20px; margin-left:10px; position: relative; z-index: 999; font-family: $font_weiruan;
+			.dorpdown-cart{
+				position: absolute;top: 40px;left: -176px;width: 364px;background: #fff; font-size: 12px;border: 2px solid $color_ora;
+				ul{
+					padding: 10px; margin-bottom: 29px; max-height: 400px; overflow-x: hidden;
+					li{
+						width: 334px; padding: 5px; float: left; line-height: 20px; border-bottom: 1px dotted #ddd;
+						a{display: block; color: #666;}
+						img{
+							width: 60px; height: 60px; float: left; border: 1px solid #eee;
+						}
+						.name{
+							float: left; width: 210px; margin-left: 10px;
+							span{
+								width: 100%; height: 40px; display: block; overflow: hidden;
+							}
+						}
+						.num{
+							width: 50px; float: right; line-height: 65px; height:65px; text-align: center;
+						}
+					}
+				}
+				b{
+					width: 0;height: 0;border-width: 12px;border-style: solid;border-color: transparent  transparent  $color_ora transparent;position: absolute;top: -24px;right: 40px;
+					i{
+						width: 0;height: 0;border-width: 10px;border-style: solid;border-color: transparent  transparent  #fff transparent;position: absolute;top: -8px;right: -10px;
+					}
+				}
+				.cashier{
+					background: #EEEEEE; height: 40px; line-height: 40px; color: #666; padding: 0px 15px; position: absolute; bottom: 0px; left: 0px; width: 334px;
+				}
+			}
+
+		}
+	}
+}
+
